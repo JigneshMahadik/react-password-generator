@@ -13,7 +13,9 @@ function PwdGen(){
 
     const generatePassword = () =>{
         const newPwd = getNewPassword();
-        document.getElementById("showPwd").value = newPwd;
+        if(newPwd != undefined){
+            document.getElementById("showPwd").value = newPwd;
+        }
     }
     function getNewPassword(){
         let charLen = parseInt(document.getElementById("charLenght").value);
